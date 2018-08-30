@@ -1,0 +1,16 @@
+.classeTextoVermelho{
+    color:red;
+    size: 60cm;
+}
+.negrito {
+    font-weight: bold;
+   }
+.pulalinha{
+  display: block; 
+}
+.classeTextoVerde{
+    color: green;
+}
+.classeTextoSublinhado{
+    text-decoration: underline;
+}
