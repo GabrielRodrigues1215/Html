@@ -1,0 +1,40 @@
+
+   <html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+
+
+
+
+
+  <script>
+        function verifica(){
+            
+            var texto = document.getElementById(txt.value);
+            var res = texto.match("gabriel");
+
+            alert(res);
+            
+        }
+    
+
+  </script>
+
+</head>
+
+  <body>   
+   <form onsubmit="javascript: return verifica()">
+        <center>
+        <label for="txt">Digite Uma palavra de 6 caracteres</label> <br>
+        <input type="text" id="txt"> <br><br>
+                  
+
+        <input type="submit" value="Enviar">
+    </center>    
+   </form>
+
+     
+  </body>
+
+</html>

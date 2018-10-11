@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>AC 5</title>
+
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta charset="utf-8" />
+
+    <script>
+        function verificaNomes(nome) {
+
+            if (nome.value == "") {
+
+                alert("nome não é valido");
+                
+                return false;
+
+            }
+            else{
+
+                alert("Nome OK.");
+                return true;
+        }
+
+        }
+
+        function verificaEscola(escola) {
+
+            var listaEscolas = ["esc1", "esc2", "esc3", "esc4"];
+            var esc = true;
+
+            for (i = 0; i < listaEscolas.length; i++) {
+
+                if (escola.value == listaEscolas[i]) {
+
+                   
+                    alert("Escola ok");
+                    return true;
+
+                }
+
+            }
+
+            alert("Escola não está na lista");
+            return false;
+
+        }
+
+        function verificaIdade(idade) {
+
+
+            var ano = 2018;
+            var nascEm = 0;
+
+            if (idade.value == ""){
+                return false
+            }
+
+            var valIdade = Number(idade.value);
+
+            if (idade.value < 0) {
+
+                alert("Não nasceu");
+                
+                return false;
+
+            }
+
+            if (idade.value > 120) {
+
+                
+                
+                alert("Já morreu");
+                
+                return false;
+
+            }
+
+            nascEm = ano - valIdade;
+
+            alert("Você nasceu em " + nascEm);
+            return true;
+
+        }
+
+        function enviar() {
+
+            var nome = document.getElementById('nome');
+            var escola = document.getElementById('escola');
+            var idade = document.getElementById('idade');
+
+            verificaNomes(nome);
+            verificaEscola(escola);
+            verificaIdade(idade);
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form onSubmit='javascript: return enviar()'>
+
+        <label for="nome">Nome</label> <br>
+        <input type="text" id="nome" > <br>
+
+        <label for="escola">Escola</label> <br>
+        <input type="text" id="escola"> <br>
+
+        <label for="idade">Idade</label> <br>
+        <input type="text" id="idade"> <br>
+
+        <input type="submit" value="enviar">
+
+    </form>
+
+</body>
+
+</html>
